@@ -1,0 +1,90 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  /*background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);*/
+  background-image:url(../images/glow.gif);
+  background-size:center;
+  display: flex; justify-content: center; align-items: center;
+  color: #fff;
+}
+
+.app {
+  width: 95%; max-width: 600px; height: 90vh;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+header {
+  padding: 15px;
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.logo{
+    color: #4e9ef7;
+  
+}
+
+header h1 { font-size: 1.2rem; }
+
+header button {
+  background: rgba(255,255,255,0.1);
+  border: none; color: #fff; padding: 6px 12px;
+  border-radius: 12px; cursor: pointer;
+  transition: background 0.2s;
+}
+header button:hover { background: rgba(255,255,255,0.25); }
+
+main {
+  flex: 1; overflow-y: auto; padding: 15px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+
+.message {
+  max-width: 80%; padding: 10px 14px;
+  border-radius: 14px; animation: fadeIn 0.3s ease-in-out;
+}
+
+.user {
+  align-self: flex-end;
+  background: #4e9ef7;
+}
+.bot {
+  align-self: flex-start;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+footer {
+  padding: 12px; display: flex; gap: 8px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+}
+
+textarea {
+  flex: 1; resize: none;
+  padding: 8px; border-radius: 12px;
+  border: none; outline: none;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  min-height: 40px; max-height: 100px;
+}
+
+#send-btn {
+  background: #4e9ef7;
+  border: none; padding: 0 16px;
+  border-radius: 12px; cursor: pointer; color: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
